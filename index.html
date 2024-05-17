@@ -10,17 +10,39 @@
     <div class="container">
         <h1>Pengecekan Harga Barang</h1>
         <input type="text" id="searchInput" placeholder="Cari nama barang...">
+
+        <form id="addItemForm">
+            <input type="text" id="itemName" placeholder="Nama barang..." required>
+            <input type="number" id="itemPrice" placeholder="Harga barang..." required>
+            <input type="password" id="addItemPassword" placeholder="Password" required>
+            <button type="submit">Tambah Barang</button>
+        </form>
+
         <table id="priceTable">
             <thead>
                 <tr>
                     <th>Nama Barang</th>
                     <th>Harga</th>
+                    <th>Aksi</th>
                 </tr>
             </thead>
             <tbody id="tableBody">
                 <!-- Data dari XML akan dimasukkan di sini -->
             </tbody>
         </table>
+    </div>
+
+    <!-- Modal untuk edit barang -->
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <form id="editItemForm">
+                <input type="text" id="editItemName" placeholder="Nama barang..." required>
+                <input type="number" id="editItemPrice" placeholder="Harga barang..." required>
+                <input type="password" id="editItemPassword" placeholder="Password" required>
+                <button type="submit">Simpan Perubahan</button>
+            </form>
+        </div>
     </div>
 
     <script src="script.js"></script>
